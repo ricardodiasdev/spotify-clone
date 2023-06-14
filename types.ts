@@ -31,7 +31,7 @@ export interface Product {
 export interface Price {
   id: string;
   product_id?: string;
-  active?: string;
+  active?: boolean;
   description?: string;
   unit_amount?: number;
   currency?: string;
@@ -39,7 +39,7 @@ export interface Price {
   interval?: Stripe.Price.Recurring.Interval;
   interval_count?: number;
   trial_period_days?: number | null;
-  metada?: Stripe.Metadata;
+  metadata?: Stripe.Metadata;
   products?: Product;
 }
 
